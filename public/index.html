@@ -5,13 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>vue_study</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+
+  <div id ="test">
+   用户名 <input type="text" class="id">
+    <br>
+    密码 <input type="password" class="pw">
+    <br>
+    <button value="登陆" class="lodin">登陆</button>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    var vm=new Vue(
+            {
+              el: "#test",
+              data:
+                      {
+                        msg:"hello",
+                        test:[
+                            {text:"123"},
+                            {text: "456"},
+                            {text:"789"}
+
+                        ]
+                      },
+              methods: {
+
+              }
+            }
+    );
+
+  </script>
   </body>
 </html>
